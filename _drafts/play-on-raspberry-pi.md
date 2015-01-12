@@ -86,46 +86,57 @@ Your Raspberry Pi is now ready to be booted up for the OS installation.
 
 
 ## OS
+
+In order to run anything on the Raspberry Pi, we first have to install an operating system.
+I went with Raspbian which is a Linux distribution for the Pi based on one I'm used to: Debian. The current version is Wheezy and can be found on [the Raspberry Pi Foundation website](http://www.raspberrypi.org/downloads/) along with several other distributions.
+I will show how to install Raspbian but the instructions can easily be used for any distributions available from the Raspberry Pi Foundation.
+
+
 ### OS image
-### Installation
-### Update
-## Music library
-### Free for all
-### Using quotas
-## play
-### Requirements
-### Bootstrap
-### Tests
-## Automate everything
-### Start play at boot
-### Update library
 
----
-
-# Install Raspbian OS
-
-Version?
-
-Plug the microSD card into your computer and follow one of the fine guides from the Raspberry Foundation to write the Raspbian image on it:
+For the Pi to kick off the installation process at boot, the Raspbian OS image has to be written onto the MicroSD card.
+So get the image from [the Raspberry Pi Foundation website](http://www.raspberrypi.org/downloads/), please prefer the [torrent download](http://downloads.raspberrypi.org/raspbian_latest.torrent) but note that the [direct download](http://downloads.raspberrypi.org/raspbian_latest) is also available.
+When the download is complete, extract it, plug the microSD card into your computer and follow one of the fine guides from the Raspberry Foundation to write the Raspbian image on it:
 
 * [Linux](http://www.raspberrypi.org/documentation/installation/installing-images/linux.md)
 * [Mac OS](http://www.raspberrypi.org/documentation/installation/installing-images/mac.md)
 * [Windows](http://www.raspberrypi.org/documentation/installation/installing-images/windows.md)
 
-Then plug the microSD card in your Raspberry Pi and connect the later to your USB keyboard and you HDMI display. Then power the Pi with the microUSB power adapter.
-You should now be screaming "It's alive!!!".
-The install process will take you through all the OS configuration (see [this step-by-step guide]() for hand-holding) and then reboot the Pi so it's yours to play with.
 
-Out of the box, Raspbian uses DHCP to configure its network interfaces, in most networks that should work straight away. If you don't have control over DNS and DHCP though, you might want to assign a static IP to your Pi, the [Debian wiki](https://wiki.debian.org/NetworkConfiguration#Configuring_the_interface_manually) has the information you need.
+### Installation
 
-You should now be able to SSH into your server.
+When your MicroSD card is ready, plug it in your Raspberry Pi and connect the later to your USB keyboard and HDMI display. Then power the Pi with the MicroUSB power adapter.
 
-Congrats! You got yourself a proper server that could fit in your back pocket.
+> It's alive!!!
 
-# Getting Play on
+The install process will take you through all the OS configuration (see [this step-by-step guide](http://www.raspbian.org/RaspbianInstaller) for hand-holding) and then reboot the Pi.
 
-First you will need to have a working Internet connection from the Raspberry Pi to install some Debian packages and get Play from Github.
-To check whether the Pi can acces the Internet, issue the following command at the prompt:
+Out of the box, Raspbian uses DHCP to configure its network interfaces, in most networks that should work straight away. If you don't have control over DNS and DHCP though, you might want to assign a static IP to your Pi, the [Debian wiki](https://wiki.debian.org/NetworkConfiguration#Configuring_the_interface_manually) has the information you need to do that.
+
+You should then be able to SSH into your server:
+
+```bash
+login as: pi
+pi@10.0.0.3's password:
+Linux play 3.12.28+ #709 PREEMPT Mon Sep 8 15:28:00 BST 2014 armv6l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Wed Dec 17 19:45:29 2014 from karouf-laptop
+pi@play ~ $
+```
+
+Congrats! You now have a proper server that can fit in your back pocket.
+
+
+### Update
+
+You will first need to have a working Internet connection from the Raspberry Pi.
+To check whether it can acces the Internet, issue the following command at the prompt:
 
 `pi@play ~ $ wget http://google.com`
 
@@ -153,6 +164,119 @@ Acquire::http::Proxy "http://10.0.0.1:3142";
 You should now be able to update APT's packages list:
 
 `pi@play ~ $ sudo apt-get update`
+
+
+
+## Music library
+
+### Free for all
+
+
+### For multiple users
+
+#### Setup
+
+Create a directory that will hold all the music:
+
+`sudo mkdir /home/music`
+
+We'll create a group to control how much music can be uploaded to the Pi. Each user will belong to this group and also have a quota.
+
+`pi@play ~ $ sudo addgroup play-users`
+
+And a first user, so we can control quota individually:
+
+`pi@play ~ $ sudo adduser --home /home/music/myuser --ingroup play-users --disabled-login myuser`
+
+Set a new password for the user:
+
+`pi@play ~ $ sudo passwd myuser`
+
+Make sure the home directory of the user belongs to `root`, it is required in order to prevent the user to log onto the server et limit him to use SFTP to access only his home directory.
+
+`pi@play ~ $ sudo chown -R root:root /home/music/myuser`
+
+Create a `sftp-only` group
+
+`pi@play ~ $ sudo addgroup sftp-only`
+
+Add the user to it
+
+`pi@play ~ $ sudo usermod -a -G sftp-only myuser`
+
+Modify the `sshd` configuration in order to check whether the user belongs to the `sftp-only` group and only allow SFTP if it is.
+Change the SFTP subsystem used in `/etc/ssh/sshd_config`:
+
+```
+#Subsystem sftp /usr/lib/openssh/sftp-server
+Subsystem sftp internal-sftp
+```
+
+And add the following at the end of the file:
+
+```
+Match Group sftp-only
+  ChrootDirectory /home/music/%u
+  AllowTCPForwarding no
+  X11Forwarding no
+  ForceCommand internal-sftp
+```
+
+Force the SSH server to reload the configuration
+
+`pi@play ~ $ sudo service ssh restart`
+
+The `reload ` doesn't seem to be enough.
+
+If you need to add additional users for **play** you can also use the script in [this gist](https://gist.github.com/karouf/8f1141955c174eb878de).
+
+#### Quotas
+
+Quotas are not enabled by default. For this to work, you'll need to install the quota tools:
+
+`pi@play ~ $ sudo apt-get install quota`
+
+And then activate user and group quota for the root filesystem in `/etc/fstab`. Find this line:
+
+`/dev/mmcblk0p2  /               ext4    defaults,noatime      0       1`
+
+And add `usrquota` and `grpquota` to it:
+
+`/dev/mmcblk0p2  /               ext4    defaults,noatime,usrquota,grpquota      0       1`
+
+Reboot the Pi so it will take this modification into account.
+
+`pi@play ~ $ reboot`
+
+When it's back up, connect to it and check the quota for the current user:
+
+`pi@play ~ $ quota`
+
+If it doesn't scream at you, you're good.
+
+
+
+
+
+## play
+### Requirements
+### Bootstrap
+### Tests
+## Automate everything
+### Start play at boot
+### Update library
+## Keeping playing smooth: cgroups
+
+---
+
+# Install Raspbian OS
+
+Version?
+
+
+
+# Getting Play on
+
 
 Next we need to install Git in order to get the **play** code from GitHub:
 
