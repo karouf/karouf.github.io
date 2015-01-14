@@ -14,6 +14,11 @@ We tried it for a while but I felt like we could do better and have it running o
 It's a tiny computer on a small PCB and you can get one for about $35. Plug it to the power and the network and there you go, you have a perfectly acceptable server. And with larger capacity SD cards now available, you can have enough room for a lot of music.
 
 
+Working to the rythm of your favorite tune is awesome. And Raspberry Pis are awesome too!
+Thanks to a nice little piece of software called [Play]() (not the beany wearing pop band), I was able to turn a $35 Raspberry Pi into a flipping jukebox for my team so we can all bang our heads in synch. Love it!
+This series of posts will walk through the setup of the whole system from getting the hardware up and running to ensuring that your co-workers can't fill up the device with shitty music. But they will be able to put some though.
+
+
 ## Checklist
 
 It's always good to know what you'll need beforehand so you don't spend half an hour looking around for that part you can't go on without at some point during the setup.
