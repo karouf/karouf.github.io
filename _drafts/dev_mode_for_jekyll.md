@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Preview mode for Jekyll
+title: Don't Trigger Analytics When Previewing Your Jekyll Site
 categories: technology
 tags: jekyll
 ---
