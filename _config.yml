@@ -1,7 +1,7 @@
 # Site settings
 title: Renaud Martinet
 email: karouf@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+description: "Writings by Renaud Martinet."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://renaudmarti.net" # the base hostname & protocol for your site
 twitter_username: karouf
