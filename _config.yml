@@ -17,3 +17,11 @@ kramdown:
 
 gems:
   - jekyll-sitemap
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true

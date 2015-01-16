@@ -12,4 +12,9 @@ layout: default
     {{ content }}
   </article>
 
+  {% unless site.draft %}
+    {% if page.comments  %}
+      {% include disqus.html %}
+    {% endif %}
+  {% endunless %}
 </div>
