@@ -9,6 +9,7 @@ github_username:  karouf
 
 # Build settings
 future: false
+permalink: /posts/:title/
 markdown: kramdown
 
 kramdown:
