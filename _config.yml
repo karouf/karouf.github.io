@@ -8,6 +8,7 @@ twitter_username: karouf
 github_username:  karouf
 
 # Build settings
+future: false
 markdown: kramdown
 
 kramdown:
