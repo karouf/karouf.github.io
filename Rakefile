@@ -8,14 +8,19 @@ end
 
 namespace :preview do
   task :draft do
-     sh 'bundle exec jekyll serve --config _config.yml,_config_draft.yml --future --drafts --unpublished'
+    sh 'bundle exec jekyll serve --config _config.yml,_config_draft.yml --future --drafts --unpublished'
   end
 
-  desc 'Preview before release (as it will be on production)'
+  desc 'Preview locally (site.draft flag set and only published posts)'
+  task :local do
+    sh 'bundle exec jekyll serve --config _config.yml,_config_draft.yml'
+  end
+
+  desc 'Preview before release (exactly as it will be live)'
   task :release do
     sh 'bundle exec jekyll serve'
   end
 end
 
-desc 'Preview for editing'
+desc 'Preview for editing (site.draft flag set and draft, unpublished and future posts showing)'
 task :preview => 'preview:draft'
