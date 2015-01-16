@@ -3,7 +3,11 @@ require 'html/proofer'
 desc 'Run tests on the generated site'
 task :test do
   sh 'bundle exec jekyll build'
-  HTML::Proofer.new("./_site", { href_ignore: ['#'] }).run
+
+  jekyll_config = YAML::load_file('_config.yml')
+  url_regexp = /^#{Regexp.escape(jekyll_config['url'])}/
+
+  HTML::Proofer.new("./_site", { href_ignore: ['#', url_regexp] }).run
 end
 
 namespace :preview do
