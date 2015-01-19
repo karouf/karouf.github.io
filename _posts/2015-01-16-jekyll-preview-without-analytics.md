@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Don't Trigger Analytics When Previewing Your Jekyll Site
+description: How to avoid sending hits to your analytics provider when checking your articles in progress.
 categories: technology
 tags: jekyll
 ---
