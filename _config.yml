@@ -22,6 +22,11 @@ defaults:
   -
     scope:
       path: ""
+    values:
+      lang: en
+  -
+    scope:
+      path: ""
       type: "posts"
     values:
       comments: true
