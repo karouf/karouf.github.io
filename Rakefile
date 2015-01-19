@@ -30,6 +30,11 @@ end
 desc 'Preview for editing (site.draft flag set and draft, unpublished and future posts showing)'
 task :preview => 'preview:draft'
 
+namespace :publish do
+  desc 'Publish only (no pings)'
+  task :only => [:test, :push]
+end
+
 desc 'Publish the site'
 task :publish => [:test, :push, :ping]
 
