@@ -1,0 +1,16 @@
+{% capture categories %}{{ page.categories | join: ',' }}{% endcapture %}
+{% capture tags %}{{ page.tags | join: ',' }}{% endcapture %}
+{% if categories %}
+  {% if tags %}
+    {% capture keywords %}{{ categories }},{{ tags }}{% endcapture %}
+  {% else %}
+    {% capture keywords %}{{ categories }}{% endcapture %}
+  {% endif %}
+{% else %}
+  {% if tags %}
+    {% capture keywords %}{{ tags }}{% endcapture %}
+  {% else %}
+    {% assign keywords = '' %}
+  {% endif %}
+{% endif %}
+<meta name="keywords" content="{{ keywords }}" />
