@@ -65,46 +65,46 @@ Got everything? We're good to go then. So let's start by putting together the Ra
 Get the case and the Raspberry Pi out of their respective boxes and wrappings.
 Be careful with the Pi though: you're handling the PCB directly and you could damage it either through a static discharge or being too rough with it.
 
-![Raw Raspberry Pi B+ PCB](/images/raw-raspberry-pi-pcb.png)
-![OneNineDesign Raspberry Pi B+ black case](/images/oneninedesign-raspberry-pi-bplus-black-case.png)
+![Raw Raspberry Pi B+ PCB](/images/raw-raspberry-pi-pcb.jpg)
+![OneNineDesign Raspberry Pi B+ black case](/images/oneninedesign-raspberry-pi-bplus-black-case.jpg)
 
 Open up the case. Most cases will just split in bottom and top halves.
 You can see here that mine is a bit trickier as it has a bottom part to receive the PCB, a middle part that covers the PCB but still gives you access to the display, camera and GPIO connectors, and a top cover.
 
-![OneNineDesign Raspberry Pi B+ black case parts](/images/oneninedesign-raspberry-pi-bplus-black-case-parts.png)
+![OneNineDesign Raspberry Pi B+ black case parts](/images/oneninedesign-raspberry-pi-bplus-black-case-parts.jpg)
 
 Place the Pi on the bottom part, slide it in towards the microSD card slot and it should settle in.
 
-![Sliding the Pi into position on the bottom part of the case](/images/sliding-the-pi-into-position-on-the-bottom-of-the-case.png)
-![The Pi settled in on the bottom of the case](/images/the-pi-settled-in-on-the-bottom-of-the-case.png)
+![Sliding the Pi into position on the bottom part of the case](/images/sliding-the-pi-into-position-on-the-bottom-of-the-case.jpg)
+![The Pi settled in on the bottom of the case](/images/the-pi-settled-in-on-the-bottom-of-the-case.jpg)
 
 Insert the bottom part into the middle one. You might have to use a little force but be careful not to damage the PCB.
 
-![Inserting the bottom part of the case into the middle part](/images/inserting-the-bottom-part-of-the-case-into-the-middle-part.png)
-![Bottom part of the case inserted into the middle part](/images/bottom-part-of-the-case-inserted-into-the-middle-part.png)
+![Inserting the bottom part of the case into the middle part](/images/inserting-the-bottom-part-of-the-case-into-the-middle-part.jpg)
+![Bottom part of the case inserted into the middle part](/images/bottom-part-of-the-case-inserted-into-the-middle-part.jpg)
 
 As you can see, the middle part covers the PCB but still gives access to all the internal connectors.
 
-![The middle part of the case gives you access to the connectors while still protecting the PCB](/images/middle-part-of-the-case-from-above.png)
+![The middle part of the case gives you access to the connectors while still protecting the PCB](/images/middle-part-of-the-case-from-above.jpg)
 
 The only thing left is to put the top cover in place: just place so the guides match at the corners and on the sides. It will insert a little but will not click and will leave a small gap between the top and the middle part. This is normal: it will help to create an air flow to keep the Pi from overheating.
 
-![Putting the top cover of the case in place](/images/putting-the-top-cover-of-the-case-in-place.png)
+![Putting the top cover of the case in place](/images/putting-the-top-cover-of-the-case-in-place.jpg)
 
 Now that the whole case is put together, it will be easier to handle the Raspberry Pi.
 
-![The whole case put together](/images/.png)
+![The whole case put together](/images/raspberry-pi-put-together.jpg)
 
 You can have a look at the sides of the case and will find the following connectors:
 
 Ethernet and 4 USB connectors
-![Ethernet and 4 USB connectors](/images/rapsberry-pi-ethernet-and-usb-connectors.png)
+![Ethernet and 4 USB connectors](/images/rapsberry-pi-ethernet-and-usb-connectors.jpg)
 
 MicroUSB power, HDMI and 3.5mm jack audio and composite video connectors
-![MicroUSB power, HDMI and 3.5mm jack audio and composite video connectors](/images/rapsberry-pi-microusb-power-hdmi-and-jack-audio-and-composite-video-connectors.png)
+![MicroUSB power, HDMI and 3.5mm jack audio and composite video connectors](/images/rapsberry-pi-microusb-power-hdmi-and-jack-audio-and-composite-video-connectors.jpg)
 
 MicroSD card push-push socket
-![MicroSD card push-push socket](/images/rapsberry-pi-microsd-card-push-push-socket.png)
+![MicroSD card push-push socket](/images/rapsberry-pi-microsd-card-push-push-socket.jpg)
 
 Your Raspberry Pi is now ready to be booted up for the OS installation.
 
