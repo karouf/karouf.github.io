@@ -1,0 +1,111 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  /*font-family: 'BenchNine', sans-serif;*/
+}
+
+html {
+  background-image: url('/images/clouds.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.cover {
+  height: 100%;
+}
+
+.header {
+  position: fixed;
+  top: -1rem;
+  z-index: -999;
+}
+
+@media (min-height: 585px) {
+  .header {
+    top: -0.5rem;
+  }
+}
+
+@media (min-height: 600px) {
+  .header {
+    top: 0rem;
+  }
+}
+
+@media (min-height: 625px) {
+  .header {
+    top: 0.5rem;
+  }
+}
+
+@media (min-height: 650px) {
+  .header {
+    top: 1rem;
+  }
+}
+
+@media (min-height: 675px) {
+  .header {
+    top: 1.5rem;
+  }
+}
+
+@media (min-height: 700px) {
+  .header {
+    top: 2rem;
+  }
+}
+
+@media (min-height: 750px) {
+  .header {
+    top: 3rem;
+  }
+}
+
+.quote {
+  font-weight: 600;
+  font-size: 2.5rem;
+  width: 15.8rem;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.quote span {
+  font-size: 0.5rem;
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
+.attribution {
+  font-weight: 300;
+  font-style: italic;
+  text-shadow: 0 0 4px #fff;
+  position: relative;
+  left: 0.5rem;
+}
+
+.attribution em {
+  font-weight: bold;
+}
+
+.content {
+  background-color: #000;
+  color: #fff;
+  min-height: 100%;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+
+.content a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid #3090c7;
+}
