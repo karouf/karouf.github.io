@@ -143,3 +143,9 @@ DEPENDENCIES
   github-pages
   html-proofer (~> 1.6.0)
   rake (~> 10.4.2)
+
+RUBY VERSION
+   ruby 2.1.2p95
+
+BUNDLED WITH
+   1.13.7
