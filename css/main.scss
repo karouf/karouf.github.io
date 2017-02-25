@@ -28,6 +28,7 @@ body {
   width: 100%;
   height: 100%;
   float: left;
+  position: relative;
 }
 
 .intro {
@@ -72,6 +73,20 @@ body {
 .intro__social-media a:hover {
   color: #cf5300;
 }
+
+.scroll-hint {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.scroll-hint a {
+  color: rgba(255, 255, 255, 0.15);
+}
+
 
 .nav {
   background-color: #bbb;
