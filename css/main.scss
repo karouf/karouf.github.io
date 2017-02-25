@@ -40,20 +40,20 @@ body {
 
 .intro__name {
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 2rem;
   font-weight: 500;
-  line-height: 4rem;
+  line-height: 2rem;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .intro__occupation {
   font-family: "Roboto", sans-serif;
   font-style: italic;
   font-weight: 100;
-  font-size: 2.25rem;
+  font-size: 1rem;
   margin: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .intro__occupation em {
@@ -64,9 +64,9 @@ body {
 .intro__social-media a {
   color: #fff;
   text-decoration: none;
-  font-size: 3rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .intro__social-media a:hover {
