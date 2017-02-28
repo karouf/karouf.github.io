@@ -25,7 +25,6 @@ body {
   background-color: rgba(0,0,0,0.5);
   background-blend-mode: multiply;
   background-size: cover;
-  width: 100%;
   height: 100%;
   float: left;
   position: relative;
@@ -90,7 +89,6 @@ body {
 
 .nav {
   background-color: #bbb;
-  width: 100%;
   height: 100%;
   float: left;
 }
@@ -157,11 +155,31 @@ body {
   margin: 0;
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (max-aspect-ratio: 1/1) {
+  .hero {
+    background-image: url("/assets/hero_portrait_bg.jpg");
+  }
+  .hero {
+    width: 100%;
+  }
+  .nav {
+    width: 100%;
+  }
+}
+
+@media screen and (min-aspect-ratio: 1/1) {
   .hero {
     background-image: url("/assets/hero_landscape_bg.jpg");
   }
+  .hero {
+    width: 60%;
+  }
+  .nav {
+    width: 40%;
+  }
+}
 
+@media screen and (min-width: 560px) {
   .intro__name {
     font-size: 2rem;
     line-height: 2rem;
@@ -195,10 +213,6 @@ body {
 }
 
 @media screen and (min-width: 800px) {
-  .hero {
-    width: 60%;
-  }
-
   .intro__name {
     font-size: 3rem;
     line-height: 3rem;
@@ -210,10 +224,6 @@ body {
 
   .scroll-hint {
     display: none;
-  }
-
-  .nav {
-    width: 40%;
   }
 
   .nav-item__icon {
