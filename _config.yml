@@ -3,7 +3,7 @@ title: Renaud Martinet
 email: karouf@gmail.com
 description: "Writings by Renaud Martinet."
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://renaudmarti.net" # the base hostname & protocol for your site
+url: "https://renaudmarti.net" # the base hostname & protocol for your site
 twitter_username: karouf
 github_username:  karouf
 
