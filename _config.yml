@@ -32,4 +32,4 @@ defaults:
       comments: true
 
 prose:
-  - media: "media"
+  media: "media"
