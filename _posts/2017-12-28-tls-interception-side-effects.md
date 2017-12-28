@@ -25,11 +25,13 @@ Our customer had to deploy a TLS certificate to every devices he wanted to inspe
 
 From the workstations with the extra certificate, the TLS negociation went like this:
 
-![msc-tls-negociation-ok.png]({{site.baseurl}}/_drafts/msc-tls-negociation-ok.png)
+![2017-12-28-msc-tls-negociation-ok.png]({{site.baseurl}}/_posts/2017-12-28-msc-tls-negociation-ok.png)
+
 
 But from our devices, here is where it went south:  
 
-![msc-tls-negociation-ko.png]({{site.baseurl}}/_drafts/msc-tls-negociation-ko.png)
+![2017-12-28-msc-tls-negociation-ko.png]({{site.baseurl}}/_posts/2017-12-28-msc-tls-negociation-ko.png)
+
 
 In this case the device can't validate the proxy certificate because it doesn't trust it.
 
