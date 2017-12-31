@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/karouf
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://renaudmarti.net
+  * I am karouf (https://keybase.io/karouf) on keybase.
+  * I have a public key ASDCoSpwMLtgCM-12JWRhgKwsnPjPMHZ9mp6-5XwgqFQqQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010112774e35cdc7d60fef2032a4e88374218b0017819f8190c45abaa09ed32977810a",
+      "host": "keybase.io",
+      "kid": "0120c2a12a7030bb6008cfb5d895918602b0b273e33cc1d9f66a7afb95f082a150a90a",
+      "uid": "3d958b59c98d714210dd8e4e40b58719",
+      "username": "karouf"
+    },
+    "merkle_root": {
+      "ctime": 1514729147,
+      "hash": "27750847cdcde195ac60afdb3b74fe8aa8cf67fa0a6e87c4d8ab6e1e54e8d9f90297b130ad1f8763c0eed89254c88edffa12f557813298a458c53cf45e504338",
+      "hash_meta": "21190f7b7320854142e5769dd61925e024e64209bf5eeafa659c68e3c12edb95",
+      "seqno": 1872497
+    },
+    "service": {
+      "hostname": "renaudmarti.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.38"
+  },
+  "ctime": 1514729165,
+  "expire_in": 504576000,
+  "prev": "1c6652617b364d41a47f27ab619ae111b7cf6fe6c55018fbd7809939e48df1e8",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgwqEqcDC7YAjPtdiVkYYCsLJz4zzB2fZqevuV8IKhUKkKp3BheWxvYWTFA0V7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxMTI3NzRlMzVjZGM3ZDYwZmVmMjAzMmE0ZTg4Mzc0MjE4YjAwMTc4MTlmODE5MGM0NWFiYWEwOWVkMzI5Nzc4MTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYzJhMTJhNzAzMGJiNjAwOGNmYjVkODk1OTE4NjAyYjBiMjczZTMzY2MxZDlmNjZhN2FmYjk1ZjA4MmExNTBhOTBhIiwidWlkIjoiM2Q5NThiNTljOThkNzE0MjEwZGQ4ZTRlNDBiNTg3MTkiLCJ1c2VybmFtZSI6Imthcm91ZiJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUxNDcyOTE0NywiaGFzaCI6IjI3NzUwODQ3Y2RjZGUxOTVhYzYwYWZkYjNiNzRmZThhYThjZjY3ZmEwYTZlODdjNGQ4YWI2ZTFlNTRlOGQ5ZjkwMjk3YjEzMGFkMWY4NzYzYzBlZWQ4OTI1NGM4OGVkZmZhMTJmNTU3ODEzMjk4YTQ1OGM1M2NmNDVlNTA0MzM4IiwiaGFzaF9tZXRhIjoiMjExOTBmN2I3MzIwODU0MTQyZTU3NjlkZDYxOTI1ZTAyNGU2NDIwOWJmNWVlYWZhNjU5YzY4ZTNjMTJlZGI5NSIsInNlcW5vIjoxODcyNDk3fSwic2VydmljZSI6eyJob3N0bmFtZSI6InJlbmF1ZG1hcnRpLm5ldCIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjM4In0sImN0aW1lIjoxNTE0NzI5MTY1LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjFjNjY1MjYxN2IzNjRkNDFhNDdmMjdhYjYxOWFlMTExYjdjZjZmZTZjNTUwMThmYmQ3ODA5OTM5ZTQ4ZGYxZTgiLCJzZXFubyI6OCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBlGUw51OB2Hqgd9MPoOv+GFFDCDy9SXsvS1x+Rj0c7ztEwp63+LqyliNYV2gpe5y/8Q5pu8RrByyvpvza6ANUFqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgPnmnQ0ANEGqK3w+T3VxgLs84xZnAK6VNN73jm4j7vxejdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/karouf
+
+==================================================================
