@@ -1,0 +1,8 @@
+---
+hide_body: false
+fields:
+- name: lang
+  label: Lang
+  type: text
+  hidden: false
+  default: en
