@@ -1,7 +1,10 @@
 ---
+title: Use a Raspberry Pi as a jukebox - Part 1
+date: 2018-02-25 16:46:00.383000000 Z
+categories:
+- jekyll
+- update
 layout: post
-title:  "Use a Raspberry Pi as a jukebox - Part 1"
-categories: jekyll update
 ---
 
 Working to the rythm of your favorite tune is awesome. And Raspberry Pis are awesome too!

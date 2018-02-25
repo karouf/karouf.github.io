@@ -1,12 +1,13 @@
 ---
-layout: post
-title:  "Make Apache proxy the REMOTE_USER header. And why."
+title: Make Apache proxy the REMOTE_USER header. And why.
+date: 2017-01-31 00:00:00 Z
 categories:
-  - technology
+- technology
 tags:
-  - apache
-  - authentication
-  - reverse proxy
+- apache
+- authentication
+- reverse proxy
+layout: post
 ---
 
 The other day one of my colleague was trying to integrate a new application behind a simple authentication proxy: Apache + mod_authnz_sspi + mod_proxy_http, and it just wasn't working. The proxified app wasn't getting the `REMOTE_USER` header with the ID of the authentified user. The weird thing is that another app proxified with mod_proxy_ajp was getting it! We knew that something was up with our Apache conf. I remembered working on something similar before and went to dig up some old Apache conf to help him out.

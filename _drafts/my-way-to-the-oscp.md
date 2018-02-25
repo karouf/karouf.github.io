@@ -1,6 +1,8 @@
 ---
-published: false
+title: My Way To The Oscp
+date: 2017-12-08 00:00:00 Z
 ---
+
 ## My way to the OSCP
 
 - why the OSCP

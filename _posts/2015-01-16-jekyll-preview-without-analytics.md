@@ -1,9 +1,13 @@
 ---
-layout: post
 title: Don't Trigger Analytics When Previewing Your Jekyll Site
-description: How to avoid sending hits to your analytics provider when checking your articles in progress.
-categories: technology
-tags: jekyll
+date: 2015-01-16 00:00:00 Z
+categories:
+- technology
+tags:
+- jekyll
+layout: post
+description: How to avoid sending hits to your analytics provider when checking your
+  articles in progress.
 ---
 
 When I'm writing, I preview articles locally in [Jekyll](http://jekyllrb.com) and reload them **a lot**. I don't want to trigger my analytics code everytime and record hits that are just me checking my article in progress.

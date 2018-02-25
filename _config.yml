@@ -1,35 +1,35 @@
-# Site settings
+---
 title: Renaud Martinet
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+  values:
+    lang: en
+- scope:
+    path: ''
+    type: posts
+  values:
+    comments: true
 email: karouf@gmail.com
-description: "Writings by Renaud Martinet."
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://renaudmarti.net" # the base hostname & protocol for your site
+description: Writings by Renaud Martinet.
+baseurl: ''
+url: http://renaudmarti.net
 twitter_username: karouf
-github_username:  karouf
-
-# Build settings
+github_username: karouf
 future: false
-permalink: /posts/:title/
+permalink: "/posts/:title/"
 markdown: kramdown
-
 kramdown:
   input: GFM
-
 gems:
-  - jekyll-sitemap
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      lang: en
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      comments: true
-
+- jekyll-sitemap
 prose:
-  media: "media"
+  media: media

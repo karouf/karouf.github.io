@@ -1,13 +1,15 @@
 ---
-published: true
-layout: post
+title: Tls Interception Side Effects
+date: 2017-12-28 00:00:00 Z
 categories:
-  - technology
+- technology
 tags:
-  - ssl
-  - tls
-  - mitm
+- ssl
+- tls
+- mitm
+layout: post
 ---
+
 I ran into a tricky problem the other day at $WORK and thought it would be a good idea to share it here, if at least to make a note of it for later.
 
 We had some devices on a client's network that wouldn't connect back to our servers anymore. As always in this case, nobody changed anything but it stopped working nonetheless.  

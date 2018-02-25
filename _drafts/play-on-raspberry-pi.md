@@ -1,8 +1,10 @@
 ---
+title: Play on the Raspberry Pi
+date: 2014-12-10 11:56:36 Z
+categories:
+- jekyll
+- update
 layout: post
-title:  "Play on the Raspberry Pi"
-date:   2014-12-10 11:56:36
-categories: jekyll update
 ---
 
 ## Intro

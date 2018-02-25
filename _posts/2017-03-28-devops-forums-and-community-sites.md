@@ -1,11 +1,13 @@
 ---
-layout: post
-title:  "Any DevOps forums or community sites out there?"
-category: technology
+title: Any DevOps forums or community sites out there?
+date: 2017-03-28 00:00:00 Z
+categories:
+- technology
 tags:
-  - devops
-  - forums
-  - community
+- devops
+- forums
+- community
+layout: post
 ---
 
 New to this whole devops thing? There are a lot of community resources out there where
