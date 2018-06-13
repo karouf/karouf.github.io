@@ -1,13 +1,13 @@
 ---
 title: Testing Ansible Roles with Molecule behind a proxy
-date: 2018-06-13
+date: 2018-06-13 00:00:00 Z
 categories:
-  - technology
+- technology
 tags:
-  - molecule
-  - ansible
-  - docker
-  - proxy
+- molecule
+- ansible
+- docker
+- proxy
 layout: post
 ---
 
